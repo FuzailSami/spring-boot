@@ -26,4 +26,14 @@ public class SoftwareEngineerController {
     public void addNewSoftwareEngineer(@RequestBody SoftwareEngineer softwareEngineer) {
         softwareEngineerService.insertSoftwareEngineer(softwareEngineer);
     }
+
+    @DeleteMapping("{id}")
+    public void deleteSoftwareEngineer(@PathVariable Integer id) {
+        softwareEngineerService.deleteSoftwareEngineer(id);
+    }
+    @PutMapping("{id}")
+    public void updateSoftwareEngineer(@PathVariable Integer id, @RequestBody SoftwareEngineer softwareEngineer)  {
+        softwareEngineerService.updateSoftwareEngineer(id,softwareEngineer);
+    }
+
 }
